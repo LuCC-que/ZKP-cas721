@@ -62,6 +62,7 @@
     "thread": "cpp",
     "cinttypes": "cpp",
     "typeinfo": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "fstream": "cpp"
   }
 }

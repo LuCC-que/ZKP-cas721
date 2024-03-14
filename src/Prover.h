@@ -22,6 +22,10 @@ class Prover {
     vector<size_t> random_values;
     queue<size_t>& messageQueue;
 
+    vector<vector<vector<size_t>>> groupedCombinations{vector<vector<size_t>>{},
+                                                       vector<vector<size_t>>{},
+                                                       vector<vector<size_t>>{}};
+
     vector<vector<bool>> wss;
 
     size_t matrix_size;
@@ -29,12 +33,10 @@ class Prover {
     size_t round = 0;
 
     void generateRandomBoolMatrix(size_t size);
-    inline vector<vector<bool>> generateCombinations(size_t n);
     void generateCombinations();
     inline void generateCombinations(size_t n, const vector<size_t>& prevals,
-                                     vector<vector<size_t>>& result);
-    void generateGroupedCombinations(size_t n, const vector<size_t>& rs, size_t k,
-                                     vector<vector<vector<size_t>>>& allCombinations);
+                                     uint8_t count);
+    inline void generateGroupedCombinations(size_t n, const vector<size_t>& rs, size_t k);
 
     inline bool f(const vector<bool>& xs);
     inline size_t poly_term(const vector<bool>& ws, const vector<size_t>& xs);
@@ -49,13 +51,17 @@ class Prover {
    public:
     Prover(queue<size_t>& messageQueue, size_t matrix_size) : messageQueue(messageQueue), matrix_size(matrix_size) {
         generateRandomBoolMatrix(matrix_size);
-        xs_size = log2(matrix_size) * 3;
+        size_t single_var_size = log2(matrix_size);
+        xs_size = single_var_size * 3;
+        wss.resize(1 << single_var_size * 2, vector<bool>(single_var_size * 2, false));
         generateCombinations();
     }
     Prover(queue<size_t>& messageQueue, string matrixFile) : messageQueue(messageQueue) {
         matrix = readMatrixFromFile(matrixFile);
         matrix_size = matrix.size();
-        xs_size = log2(matrix_size) * 3;
+        size_t single_var_size = log2(matrix_size);
+        xs_size = single_var_size * 3;
+        wss.resize(1 << single_var_size * 2, vector<bool>(single_var_size * 2, false));
         generateCombinations();
     }
     ~Prover() {}

@@ -194,8 +194,10 @@ CMakeFiles/ZKP.dir/Prover.cpp.o: /home/cas721/zkp_CT/src/Prover.cpp \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/bits/stl_queue.h \
  /usr/include/c++/11/bits/uses_allocator.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/algorithm \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
+ /usr/include/c++/11/bits/sstream.tcc \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_algobase.h /usr/include/c++/11/iterator \
  /usr/include/c++/11/bits/stream_iterator.h \

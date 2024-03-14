@@ -124,6 +124,8 @@ ZKP: CMakeFiles/ZKP.dir/main.cpp.o
 ZKP: CMakeFiles/ZKP.dir/Prover.cpp.o
 ZKP: CMakeFiles/ZKP.dir/Verifier.cpp.o
 ZKP: CMakeFiles/ZKP.dir/build.make
+ZKP: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
+ZKP: /usr/lib/x86_64-linux-gnu/libpthread.a
 ZKP: CMakeFiles/ZKP.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cas721/zkp_CT/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ZKP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ZKP.dir/link.txt --verbose=$(VERBOSE)

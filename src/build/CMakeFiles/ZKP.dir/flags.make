@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/cas721/zkp_CT/src
 
-CXX_FLAGS = -Wall -Wextra -O3 -march=native -mtune=native -std=gnu++20
+CXX_FLAGS = -Wall -Wextra -Ofast -march=native -mtune=native -fopenmp -std=gnu++20
 
