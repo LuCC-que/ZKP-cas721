@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -Wextra -O3 -march=native -mtune=native CMakeFiles/ZKP.dir/main.cpp.o CMakeFiles/ZKP.dir/Prover.cpp.o CMakeFiles/ZKP.dir/Verifier.cpp.o -o ZKP 

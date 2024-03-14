@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/build/ZKP",
+      "args": [
+        "1",
+        "../matrices/matrix4x4a.txt"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/src/build",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "CMake Build",
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ]
+}
