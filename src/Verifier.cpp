@@ -85,9 +85,9 @@ uint8_t Verifier::run() {
          << endl;
 
     // pick a random value from 1 to Zp
-    static random_device rd;
-    static mt19937 gen(rd());
-    static uniform_int_distribution<int> distribution(1, Zp);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<size_t> distribution(1, Zp);
     size_t r = distribution(gen);
 
     // calculate the interpolation

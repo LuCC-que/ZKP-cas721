@@ -18,6 +18,10 @@ int main(int argc, char* argv[]) {
         std::cerr << std::endl
                   << "Usage: " << argv[0] << " <matrix_size> <filename>"
                   << std::endl;
+        std::cerr << "if you only have matrix_size, A random matrix of size"
+                  << endl
+                  << "matrix_size x matrix_size will be generated"
+                  << std::endl;
 
         std::cerr << "if you have filename, matrix_size will be ignored"
                   << std::endl;

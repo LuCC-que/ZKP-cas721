@@ -42,6 +42,15 @@ void Prover::generateRandomBoolMatrix(size_t size) {
         matrix[a][c] = matrix[c][a] = 1;
         matrix[b][c] = matrix[c][b] = 1;
     }
+
+    cout << "Generated matrix:" << endl;
+    for (const auto& row : matrix) {
+        for (bool elem : row) {
+            cout << (elem ? "1" : "0") << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
 }
 
 void Prover::generateCombinations() {
@@ -189,7 +198,7 @@ vector<vector<bool>> Prover::readMatrixFromFile(const string& filename) {
 
     if (!inFile.is_open()) {
         cerr << "Failed to open " << filename << endl;
-        return matrix;  // return empty matrix on failure
+        return matrix;
     }
 
     while (getline(inFile, line)) {
