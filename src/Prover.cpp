@@ -1,7 +1,5 @@
 #include "Prover.h"
 
-#include <omp.h>
-
 #include <algorithm>
 #include <cmath>
 #include <iostream>
