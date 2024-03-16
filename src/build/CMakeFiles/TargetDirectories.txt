@@ -1,3 +1,0 @@
-/home/cas721/zkp_CT/src/build/CMakeFiles/ZKP.dir
-/home/cas721/zkp_CT/src/build/CMakeFiles/edit_cache.dir
-/home/cas721/zkp_CT/src/build/CMakeFiles/rebuild_cache.dir
