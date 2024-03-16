@@ -48,14 +48,12 @@ int main(int argc, char* argv[]) {
     std::unique_ptr<Prover> prover;
     Verifier verifier(messageQueue);
 
-    // Dynamically allocate the Prover based on the condition
     if (filename == "") {
         prover = std::make_unique<Prover>(messageQueue, matrix_size);
     } else {
         prover = std::make_unique<Prover>(messageQueue, filename);
     }
 
-    // Now, use the prover and verifier
     uint8_t prover_status = prover->run();
     uint8_t verifier_status = verifier.run();
 
